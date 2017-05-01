@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.widget.EditText;
 import android.content.res.Resources;
 import android.util.TypedValue;
-
+/*branch test*/
 public class JavaLayoutActivity extends AppCompatActivity {
 
     @Override
