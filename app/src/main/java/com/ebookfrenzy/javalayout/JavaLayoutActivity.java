@@ -16,8 +16,8 @@ public class JavaLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Button myButton = new Button(this);
-        myButton.setText("Press Me");
-        myButton.setBackgroundColor(Color.CYAN);
+        myButton.setText("Fuck Me");
+        myButton.setBackgroundColor(Color.YELLOW);
         myButton.setTransformationMethod(null);
 
         EditText myEditText = new EditText(this);
@@ -33,19 +33,8 @@ public class JavaLayoutActivity extends AppCompatActivity {
         buttonParams.addRule(RelativeLayout.CENTER_VERTICAL);
         buttonParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
-        RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-        textParams.addRule(RelativeLayout.ABOVE, myButton.getId());
-        textParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        textParams.setMargins(0,0,0,80);
-
-        Resources r = getResources();
-        int px = (int)TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 200, r.getDisplayMetrics());
-        myEditText.setWidth(px);
 
         myLayout.addView(myButton,buttonParams);
-        myLayout.addView(myEditText,textParams);
         setContentView(myLayout);
     }
 }
